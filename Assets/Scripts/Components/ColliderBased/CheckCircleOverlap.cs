@@ -42,11 +42,11 @@ namespace General.Components.ColliderBased
                 }
             }
         }
+    }
 
 
-        [Serializable]
-        public class OnOverlapEvent : UnityEvent<GameObject>
-        {
-        }
+    [Serializable]
+    public class OnOverlapEvent : UnityEvent<GameObject>
+    {
     }
 }
