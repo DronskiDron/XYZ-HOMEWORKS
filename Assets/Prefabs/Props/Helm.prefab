@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2582502422999235993}
+  - component: {fileID: 4764964598462070854}
   - component: {fileID: 2027950907088975099}
   - component: {fileID: 866347286}
   - component: {fileID: 866347287}
@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 5684127242982369549}
   - component: {fileID: 6946427817147193562}
   - component: {fileID: 2463995463293029563}
+  - component: {fileID: 1438996295183274362}
+  - component: {fileID: 3298149687207725946}
   m_Layer: 9
   m_Name: Helm
   m_TagString: Interactable
@@ -25,20 +27,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2582502422999235993
-Transform:
+--- !u!224 &4764964598462070854
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7134728378915226454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.45, y: -7.48, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 47.45, y: -7.48}
+  m_SizeDelta: {x: 1, y: 1.03125}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2027950907088975099
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -302,3 +309,28 @@ MonoBehaviour:
       OnSelect:
         m_PersistentCalls:
           m_Calls: []
+--- !u!222 &1438996295183274362
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134728378915226454}
+  m_CullTransparentMesh: 0
+--- !u!114 &3298149687207725946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134728378915226454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c75f61bd3060074abcfb092e062de0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keys:
+  - helm_interact
+  - '###_yes_###'
+  - '###_no_###'
+  _capitalize: 0
