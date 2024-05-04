@@ -46,7 +46,8 @@ namespace General.Components.Audio
 
         private void OnDestroy()
         {
-            _model.OnChanged -= OnSoundSettingChanged;
+            if (_model != null)
+                _model.OnChanged -= OnSoundSettingChanged;
         }
     }
 }

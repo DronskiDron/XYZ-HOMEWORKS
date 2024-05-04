@@ -20,16 +20,12 @@ MonoBehaviour:
     Value: "No\r"
   - Key: '###_continue_###'
     Value: "Continuar\r"
-  - Key: '###_loading_###'
-    Value: "Cargando...\r"
   - Key: '###_UI_###'
     Value: "###\r"
   - Key: menu_title
     Value: "Men\xFA\r"
   - Key: pause_title
     Value: "Pausa\r"
-  - Key: new_game
-    Value: "Nuevo juego\r"
   - Key: button_start
     Value: "Comenzar\r"
   - Key: button_option
@@ -44,18 +40,6 @@ MonoBehaviour:
     Value: "Atr\xE1s\r"
   - Key: button_restart
     Value: "Reanudar\r"
-  - Key: button_buy
-    Value: "Comprar\r"
-  - Key: button_use
-    Value: "Usar\r"
-  - Key: price_label
-    Value: "Precio:\r"
-  - Key: button_upgrade
-    Value: "Mejora\r"
-  - Key: label_music
-    Value: "M\xFAsica\r"
-  - Key: label_effects
-    Value: "Efectos\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
@@ -68,14 +52,6 @@ MonoBehaviour:
     Value: "Necesitas una llave...\r"
   - Key: wood_door_dial_2
     Value: "Encuentra uno en alg\xFAn lugar...\r"
-  - Key: patric_dial_1p
-    Value: "\xA1Voy a matarte!\r"
-  - Key: patric_dial_2h
-    Value: "\xA1NO! \xA1Voy a matarte!\r"
-  - Key: patric_dial_3p
-    Value: "No0000000!!!!!!!!!!!!\r"
-  - Key: patric_dial_4h
-    Value: "\xA1Te lo dije!\r"
   - Key: '###_interactions_###'
     Value: "###\r"
   - Key: helm_interact
@@ -99,24 +75,4 @@ MonoBehaviour:
   - Key: item_SpeedUpPotion
     Value: "Poci\xF3n de aceleraci\xF3n\r"
   - Key: item_PerlProjectile
-    Value: "Proyectil Perl\r"
-  - Key: '###_perks_###'
-    Value: "###\r"
-  - Key: double_jump_info
-    Value: "\xA1Esto es doble salto!\r"
-  - Key: super_throw_info
-    Value: "\xA1Esto es un s\xFAper lanzamiento!\r"
-  - Key: shield_info
-    Value: "\xA1Este es el escudo de Fource!\r"
-  - Key: wave_info
-    Value: "\xA1Esta es una ola de energ\xEDa!\r"
-  - Key: '###_stats_###'
-    Value: "\r"
-  - Key: health_stat
-    Value: "Salud\r"
-  - Key: speed_stat
-    Value: "Velocidad\r"
-  - Key: range_damage_stat
-    Value: "Da\xF1oDeAlcance\r"
-  - Key: critical_damage_stat
-    Value: "Da\xF1o\u0421r\xEDtico"
+    Value: Proyectil Perl

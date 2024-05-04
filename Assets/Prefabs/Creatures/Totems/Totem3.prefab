@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 5893797012311803983}
+  _state: {fileID: 0}
 --- !u!114 &5893797012311803990
 MonoBehaviour:
   m_ObjectHideFlags: 0

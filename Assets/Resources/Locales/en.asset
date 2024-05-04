@@ -20,16 +20,12 @@ MonoBehaviour:
     Value: "No\r"
   - Key: '###_continue_###'
     Value: "Continue\r"
-  - Key: '###_loading_###'
-    Value: "Loading...\r"
   - Key: '###_UI_###'
     Value: "###\r"
   - Key: menu_title
     Value: "Menu\r"
   - Key: pause_title
     Value: "Pause\r"
-  - Key: new_game
-    Value: "New game\r"
   - Key: button_start
     Value: "Start\r"
   - Key: button_option
@@ -44,18 +40,6 @@ MonoBehaviour:
     Value: "Back\r"
   - Key: button_restart
     Value: "Restart\r"
-  - Key: button_buy
-    Value: "Buy\r"
-  - Key: button_use
-    Value: "Use\r"
-  - Key: price_label
-    Value: "Price:\r"
-  - Key: button_upgrade
-    Value: "Upgrade\r"
-  - Key: label_music
-    Value: "Music\r"
-  - Key: label_effects
-    Value: "Effects\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
@@ -68,14 +52,6 @@ MonoBehaviour:
     Value: "You need a key...\r"
   - Key: wood_door_dial_2
     Value: "Find one somewhere...\r"
-  - Key: patric_dial_1p
-    Value: "I will kill you!\r"
-  - Key: patric_dial_2h
-    Value: "NO! I will kill you!\r"
-  - Key: patric_dial_3p
-    Value: "No0000000!!!!!!!!!!\r"
-  - Key: patric_dial_4h
-    Value: "I tolld ya!\r"
   - Key: '###_interactions_###'
     Value: "###\r"
   - Key: helm_interact
@@ -99,24 +75,4 @@ MonoBehaviour:
   - Key: item_SpeedUpPotion
     Value: "Speed Up Potion\r"
   - Key: item_PerlProjectile
-    Value: "Perl Projectile\r"
-  - Key: '###_perks_###'
-    Value: "###\r"
-  - Key: double_jump_info
-    Value: "This is double jump!\r"
-  - Key: super_throw_info
-    Value: "This is super throw!\r"
-  - Key: shield_info
-    Value: "This is fource shield!\r"
-  - Key: wave_info
-    Value: "This is power wave!\r"
-  - Key: '###_stats_###'
-    Value: "\r"
-  - Key: health_stat
-    Value: "Health\r"
-  - Key: speed_stat
-    Value: "Speed\r"
-  - Key: range_damage_stat
-    Value: "RangeDamage\r"
-  - Key: critical_damage_stat
-    Value: CriticalDamage
+    Value: Perl Projectile
