@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Creatures.Model.Data.Models;
 using General.Components.LevelManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,8 +19,9 @@ namespace Creatures.Model.Data
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
         public QuickInventoryModel QuickInventory { get; private set; }
+        public PerksModel PerksModel { get; private set; }
 
-        private List<string> _checkpoints = new List<string>();
+        private readonly List<string> _checkpoints = new List<string>();
 
 
         private void Awake()
@@ -64,8 +66,11 @@ namespace Creatures.Model.Data
 
         private void InitModels()
         {
-            QuickInventory = new QuickInventoryModel(Data);
+            QuickInventory = new QuickInventoryModel(_data);
             _trash.Retain(QuickInventory);
+
+            PerksModel = new PerksModel(_data);
+            _trash.Retain(PerksModel);
         }
 
 
@@ -133,13 +138,13 @@ namespace Creatures.Model.Data
         private List<string> _removedItems = new List<string>();
 
 
-        internal bool RestoreState(string itemID)
+        public bool RestoreState(string itemID)
         {
             return _removedItems.Contains(itemID);
         }
 
 
-        internal void StoreState(string itemID)
+        public void StoreState(string itemID)
         {
             if (!_removedItems.Contains(itemID))
                 _removedItems.Add(itemID);

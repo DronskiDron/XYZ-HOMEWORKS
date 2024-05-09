@@ -6,13 +6,13 @@ using Creatures.Model.Definitions.Repository.Items;
 using UnityEngine;
 using Utils.Disposables;
 
-namespace Creatures.Model.Data
+namespace Creatures.Model.Data.Models
 {
     public class QuickInventoryModel : IDisposable
     {
         private readonly PlayerData _data;
         public InventoryItemData[] Inventory { get; private set; }
-        public readonly IntProperty SelectedIndex = new IntProperty(0);
+        public readonly IntProperty SelectedIndex = new IntProperty();
         public event Action OnChanged;
         public InventoryItemData SelectedItem
         {

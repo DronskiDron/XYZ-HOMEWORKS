@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
 
-namespace UI.InGameMenu
+namespace UI.Windows.InGameMenu
 {
     public class InGameMenuWindow : AnimatedWindow
     {
@@ -21,6 +21,7 @@ namespace UI.InGameMenu
         public void OnShowSettings()
         {
             WindowUtils.CreateWindow("UI/SettingsWindow");
+            Close();
         }
 
 
