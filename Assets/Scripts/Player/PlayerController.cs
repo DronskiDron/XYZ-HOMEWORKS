@@ -8,6 +8,7 @@ using General.Components;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using General.Components.Health;
+using Creatures.Model.Definitions.Player;
 
 namespace Creatures.Player
 {
@@ -84,7 +85,7 @@ namespace Creatures.Player
             base.Start();
             _session = FindObjectOfType<GameSession>();
             _healthComponent = FindObjectOfType<HealthComponent>();
-            _session.Data.Hp.Value = Health.Health;
+            _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp); ;
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
             _session.Data.Inventory.OnChanged += InventoryLogger;
 
@@ -298,7 +299,9 @@ namespace Creatures.Player
         {
             if (_speedUpCooldown.IsReady)
                 _additionalSpeed = 0f;
-            return base.CalculateSpeed() + _additionalSpeed;
+
+            var defaultSpeed = _session.StatsModel.GetValue(StatId.Speed);
+            return defaultSpeed + _additionalSpeed;
         }
 
 
