@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Creatures.Model.Data;
+﻿using Creatures.Model.Data;
+using UI.Hud.BigInventory;
 using UI.Widgets;
 using UnityEngine;
 using Utils.Disposables;
@@ -10,12 +10,11 @@ namespace UI.Hud.QuickInventory
     {
         [SerializeField] private Transform _container;
         [SerializeField] private InventoryItemWidget _prefab;
+        [SerializeField] private DeleteFromInventoryComponent _deleteComponent;
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
-
         private GameSession _session;
-        private List<InventoryItemWidget> _createdItem = new List<InventoryItemWidget>();
         private DataGroup<InventoryItemData, InventoryItemWidget> _dataGroup;
 
 
@@ -23,6 +22,7 @@ namespace UI.Hud.QuickInventory
         {
             _dataGroup = new DataGroup<InventoryItemData, InventoryItemWidget>(_prefab, _container);
             _session = FindObjectOfType<GameSession>();
+            _deleteComponent.OnChanged += Rebuild;
             _trash.Retain(_session.QuickInventory.Subscribe(Rebuild));
 
             Rebuild();
@@ -39,6 +39,7 @@ namespace UI.Hud.QuickInventory
         private void OnDestroy()
         {
             _trash.Dispose();
+            _deleteComponent.OnChanged -= Rebuild;
         }
     }
 }

@@ -45,8 +45,6 @@ namespace Creatures.Model.Data.Models
 
         private void OnChangedInventory(string id, int value)
         {
-            var indexFound = Array.FindIndex(Inventory, x => x.Id == id);
-
             Inventory = _data.Inventory.GetAll(ItemTag.Usable);
             SelectedIndex.Value = Mathf.Clamp(SelectedIndex.Value, 0, Inventory.Length - 1);
             OnChanged?.Invoke();
