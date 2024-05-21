@@ -10,6 +10,8 @@ using Creatures.Model.Definitions.Items;
 using General.Components.Health;
 using Creatures.Model.Definitions.Player;
 using General.Components.Perks;
+using General.Components.TimeManipulation;
+using General.Components.GameplayTools;
 
 namespace Creatures.Player
 {
@@ -37,6 +39,9 @@ namespace Creatures.Player
         [SerializeField] private ShieldComponent _shield;
         [SerializeField] private CheckCircleOverlap _waveRange;
         [SerializeField] private PowerWaveController _waveController;
+
+        [Header("Tools")]
+        [SerializeField] private LanternComponent _lantern;
 
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
@@ -94,6 +99,7 @@ namespace Creatures.Player
 
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
             UpdatePlayerWeapon();
+            _lantern.InitLantern();
         }
 
 
@@ -389,6 +395,13 @@ namespace Creatures.Player
                 _waveController.StartPowerWaveAnimation();
                 _session.PerksModel.Cooldown.Reset();
             }
+        }
+
+
+        public void UseLantern()
+        {
+            if (_session.Data.Fuel.Value > 0)
+                _lantern.gameObject.SetActive(!_lantern.gameObject.activeSelf);
         }
     }
 }
